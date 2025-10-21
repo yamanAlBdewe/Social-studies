@@ -8,6 +8,22 @@ html, body {
   color: #e9f2ef;
   direction: rtl;
 }
+body {
+  font-family: 'Cairo', 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #041412 0%, #0b3f33 100%);
+  color:#e9f2ef;
+  direction: rtl;
+  min-height: 100vh; /* يمتد طول الصفحة بالكامل */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.page {
+  max-width:1100px;
+  margin: 0 auto;
+  padding: 24px 12px;
+  background: transparent; /* شفافية الخلفية الداخلية */
+}
 
 body::after {
   content: '';
@@ -186,4 +202,5 @@ body::after {
   .card { padding:14px; }
   .media-placeholder img { height:160px; }
 }
+
 
