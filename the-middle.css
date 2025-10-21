@@ -172,10 +172,9 @@ body::after {
 .video-inner { width:min(920px,95%); background:#081710; padding:12px; border-radius:12px; position:relative; }
 .video-inner video { width:100%; height:auto; display:block; border-radius:8px; }
 .close-modal { position:absolute; top:8px; left:8px; background:transparent; color:#fff; border:none; font-size:18px; cursor:pointer; }
+/* ✅ قسم الـ Responsive Design النهائي */
 
-/* ✅ Responsive Design Section */
-
-/* --- للأجهزة المتوسطة مثل التابلت (أقل من 992px) --- */
+/* --- للأجهزة المتوسطة (تابلت وأقل من 992px) --- */
 @media (max-width: 992px) {
   .page {
     padding: 10px;
@@ -205,46 +204,75 @@ body::after {
   }
 }
 
-/* --- للأجهزة الصغيرة مثل الموبايل (أقل من 768px) --- */
+/* --- للأجهزة الصغيرة (موبايل أقل من 768px) --- */
 @media (max-width: 768px) {
   body {
     font-size: 0.95rem;
   }
+
   .hero-ky {
     padding: 28px 14px;
   }
+
   .hero-ky h2 {
     font-size: 1.4rem;
   }
+
   .hero-ky p {
     font-size: 0.9rem;
   }
+
   .nodes {
     display: none;
   }
+
   .path-wrapper {
     height: auto;
   }
+
   .card {
     padding: 14px;
   }
+
   .media-placeholder img {
     height: 220px;
   }
+
   .media-row {
     flex-direction: column;
   }
+
   .media-row img {
     width: 100%;
     height: 140px;
   }
+
   .controls {
     flex-direction: column;
     gap: 10px;
   }
+
+  /* ✅ إصلاح مربعات الأمثلة في الجوال */
+  .small-grid {
+    display: flex;
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 10px !important;
+    width: 100%;
+  }
+
+  .small-grid .mini {
+    flex: none !important;
+    width: 100% !important;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
 }
 
-/* --- للشاشات الصغيرة جدًا (أقل من 480px) --- */
+/* --- للأجهزة الصغيرة جدًا (أقل من 480px) --- */
 @media (max-width: 480px) {
   .topbar {
     padding: 10px;
@@ -271,6 +299,12 @@ body::after {
     width: 100%;
     text-align: center;
   }
+
+  /* 🔹 المربعات تكون أوضح على أصغر الشاشات */
+  .small-grid .mini {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }
 
 /* --- للشاشات الكبيرة جدًا (أكثر من 1400px) --- */
@@ -294,18 +328,3 @@ body::after {
     font-size: 1.1rem;
   }
 }
-/* ✅ تحسين عرض مربعات الأمثلة في الموبايل */
-@media (max-width: 768px) {
-  .small-grid {
-    flex-direction: column;  /* 🔹 بدلاً من صف تصبح عمود */
-    gap: 10px;
-  }
-
-  .small-grid .mini {
-    width: 100%;             /* 🔹 تأخذ عرض الشاشة */
-    font-size: 0.95rem;
-    padding: 12px;
-    text-align: center;
-  }
-}
-
