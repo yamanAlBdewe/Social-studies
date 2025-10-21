@@ -294,3 +294,18 @@ body::after {
     font-size: 1.1rem;
   }
 }
+/* ✅ تحسين عرض مربعات الأمثلة في الموبايل */
+@media (max-width: 768px) {
+  .small-grid {
+    flex-direction: column;  /* 🔹 بدلاً من صف تصبح عمود */
+    gap: 10px;
+  }
+
+  .small-grid .mini {
+    width: 100%;             /* 🔹 تأخذ عرض الشاشة */
+    font-size: 0.95rem;
+    padding: 12px;
+    text-align: center;
+  }
+}
+
