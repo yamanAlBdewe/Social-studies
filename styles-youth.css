@@ -107,6 +107,7 @@ margin-bottom:28px;
   border:1px solid rgba(255,255,255,0.03);
   opacity:0; transform: translateY(10px);
   transition: all .6s cubic-bezier(.2,.9,.2,1);
+  margin-top:50px;
 }
 .card.revealed { opacity:1; transform: translateY(0); }
 .card h3 { font-size:1.15rem; margin-bottom:8px; color:#ffd; }
@@ -189,3 +190,4 @@ margin-bottom:28px;
   .card { padding:14px; }
   .media-placeholder img { height:160px; }
 }
+
