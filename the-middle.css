@@ -173,17 +173,126 @@ body::after {
 .video-inner video { width:100%; height:auto; display:block; border-radius:8px; }
 .close-modal { position:absolute; top:8px; left:8px; background:transparent; color:#fff; border:none; font-size:18px; cursor:pointer; }
 
-/* --- Responsive --- */
-@media (max-width:900px) {
-  .path-wrapper { height:80px; }
-  .node { width:46px; height:46px; font-size:0.95rem; }
-  .media-row img { height:86px; }
+/* ✅ Responsive Design Section */
+
+/* --- للأجهزة المتوسطة مثل التابلت (أقل من 992px) --- */
+@media (max-width: 992px) {
+  .page {
+    padding: 10px;
+  }
+  .hero-ky {
+    padding: 36px 16px;
+  }
+  .hero-ky h2 {
+    font-size: 1.6rem;
+  }
+  .hero-ky p {
+    font-size: 0.95rem;
+  }
+  .node {
+    width: 46px;
+    height: 46px;
+    font-size: 0.9rem;
+  }
+  .path-wrapper {
+    height: 80px;
+  }
+  .card {
+    padding: 16px;
+  }
+  .media-placeholder img {
+    height: 360px;
+  }
 }
-@media (max-width:600px) {
-  .hero-ky h2 { font-size:1.5rem; }
-  .nodes { display:none; } 
-  .path-wrapper { height:60px; }
-  .card { padding:14px; }
-  .media-placeholder img { height:160px; }
+
+/* --- للأجهزة الصغيرة مثل الموبايل (أقل من 768px) --- */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+  .hero-ky {
+    padding: 28px 14px;
+  }
+  .hero-ky h2 {
+    font-size: 1.4rem;
+  }
+  .hero-ky p {
+    font-size: 0.9rem;
+  }
+  .nodes {
+    display: none;
+  }
+  .path-wrapper {
+    height: auto;
+  }
+  .card {
+    padding: 14px;
+  }
+  .media-placeholder img {
+    height: 220px;
+  }
+  .media-row {
+    flex-direction: column;
+  }
+  .media-row img {
+    width: 100%;
+    height: 140px;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
+
+/* --- للشاشات الصغيرة جدًا (أقل من 480px) --- */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 10px;
+  }
+  .topbar h1 {
+    font-size: 1rem;
+  }
+  .hero-ky {
+    padding: 22px 10px;
+  }
+  .hero-ky h2 {
+    font-size: 1.25rem;
+  }
+  .card {
+    padding: 12px;
+  }
+  .card h3 {
+    font-size: 1rem;
+  }
+  .media-placeholder img {
+    height: 160px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- للشاشات الكبيرة جدًا (أكثر من 1400px) --- */
+@media (min-width: 1400px) {
+  .page {
+    max-width: 1400px;
+  }
+  .hero-ky h2 {
+    font-size: 2.3rem;
+  }
+  .hero-ky p {
+    font-size: 1.15rem;
+  }
+  .card {
+    padding: 24px;
+  }
+  .card h3 {
+    font-size: 1.3rem;
+  }
+  .card p {
+    font-size: 1.1rem;
+  }
+}
+
 
