@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>رؤيته لمستقبل دبي</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="the-middle.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <button class="back" onclick="goBack()">← العودة</button>
+      <h1>بداية نشأته</h1>
+    </div>
+  </header>
+
+  <main class="page">
+  
+    <section class="hero-ky">
+      <div class="hero-inner">
+        <h2>من جذور بسيطة إلى قيادة ملهمة</h2>
+        <p>قصة نشأة صاحب السمو الشيخ محمد بن زايد آل نهيان — رحلة تبدأ من عائلة وقيم وتنمو إلى خدمة الوطن.</p>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+   
+    <section class="path-section">
+      <div class="path-intro">
+        <p>استكشف محطات حياته المبكرة — اضغط على كل نقطة لقراءة القصة.</p>
+      </div>
+
+      <div class="path-wrapper" id="pathWrapper">
+        
+        <svg class="path-svg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true">
+          <path id="journeyPath" d="M50 150 C250 20 750 20 950 150" stroke="#2e8b73" stroke-width="6" fill="none" stroke-linecap="round" />
+        </svg>
+
+  
+        <div class="nodes">
+          <button class="node" data-id="n1" aria-label="محطة الميلاد" style="left:6%;">1</button>
+          <button class="node" data-id="n2" aria-label="القيم العائلية" style="left:28%;">2</button>
+          <button class="node" data-id="n3" aria-label="التعليم والتدريب" style="left:50%;">3</button>
+          <button class="node" data-id="n4" aria-label="التجربة العسكرية" style="left:72%;">4</button>
+          <button class="node" data-id="n5" aria-label="العودة والخدمة" style="left:94%;">5</button>
+        </div>
+      </div>
+
+      
+      <div class="cards">
+        <article id="n1" class="card reveal">
+          <h3>رؤية دبي 2030 – المدينة الأفضل للحياة والعمل</h3>
+          <div class="card-body">
+            <p>تهدف إلى جعل دبي من أفضل ثلاث مدن في العالم من حيث جودة الحياة، عبر تطوير البنية التحتية، والخدمات الصحية والتعليمية، والبيئة الحضرية المستدامة.</p>
+            <figure class="media-placeholder">
+              
+              <img src="A.png" alt="صورة تعبيرية عن الميلاد" />
+            </figure>
+          </div>
+        </article>
+
+        <article id="n2" class="card reveal">
+          <h3>الاقتصاد الرقمي والابتكار</h3>
+          <div class="card-body">
+            <p>يركّز على تحويل دبي إلى مركز عالمي للاقتصاد الرقمي، من خلال دعم الذكاء الاصطناعي، والبلوك تشين، وريادة الأعمال التكنولوجية.</p>
+
+          </div>
+        </article>
+
+        <article id="n3" class="card reveal">
+          <h3>دبي الذكية (Smart Dubai)</h3>
+          <div class="card-body">
+            <p>مبادرة لجعل كل خدمات الحكومة رقمية بنسبة 100%، لتصبح دبي أول مدينة بلا ورق وتعتمد كليًا على الذكاء الاصطناعي في الإدارة.</p>
+            <div class="media-row">
+              
+              <img src="B.png" alt="تعليم" />
+              
+            </div>
+          </div>
+        </article>
+
+        <article id="n4" class="card reveal">
+          <h3>التحول الرقمي والإدارة الذكية</h3>
+          <div class="card-body">
+            <p>أطلق مبادرات مثل الحكومة الذكية ومبادرة دبي الذكية التي جعلت الخدمات الحكومية متاحة رقمياً وساهمت في رفع كفاءة الأداء الحكومي.</p>
+            
+          </div>
+        </article>
+
+        <article id="n5" class="card reveal">
+          <h3>الاستدامة والطاقة النظيفة</h3>
+          <div class="card-body">
+            <p>من خلال “استراتيجية دبي للطاقة النظيفة 2050”، تسعى الإمارة لأن تكون مركزًا عالميًا للطاقة المتجددة بنسبة 75% من طاقتها بحلول 2050.</p>
+            
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="closing">
+      <div class="close-inner">
+        <h3>. تطوير الإنسان قبل المكان</h3>
+        <p>يؤكد محمد بن راشد أن الإنسان هو محور التنمية، لذا تُستثمر الجهود في التعليم، والإبداع، وبناء أجيال قادرة على قيادة مستقبل دبي.</p>
+        <div class="controls">
+          <a class="btn" href="index.html">العودة للصفحة الرئيسية</a>
+          <button class="btn ghost" onclick="scrollToTop()">الى الأعلى ↑</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <div id="videoModal" class="video-modal" aria-hidden="true">
+    <div class="video-inner">
+      <button class="close-modal" aria-label="اغلاق" onclick="closeVideo()">✕</button>
+      <video id="modalVideo" controls src="" preload="metadata"></video>
+    </div>
+  </div>
+
+
+  <script src="script-youth.js"></script>
+</body>
+</html>
