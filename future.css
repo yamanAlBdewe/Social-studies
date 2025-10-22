@@ -189,7 +189,25 @@ body::after {
 .video-inner { width:min(920px,95%); background:#081710; padding:12px; border-radius:12px; position:relative; }
 .video-inner video { width:100%; height:auto; display:block; border-radius:8px; }
 .close-modal { position:absolute; top:8px; left:8px; background:transparent; color:#fff; border:none; font-size:18px; cursor:pointer; }
+.card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 2%;          /* مسافة بين الصورة والنص */
+  flex-wrap: wrap;   /* يسمح للعنصرين بالانتقال أسفل بعضهما عند الشاشات الصغيرة */
+}
 
+.img {
+  flex: 1 1 50%;     /* يشغل حوالي نصف العرض */
+  max-width: 100%;
+  height: auto;
+  order: 1;           /* الصورة تظهر أولًا (على اليسار) */
+}
+
+.p {
+  flex: 1 1 46%;     /* يشغل حوالي نصف العرض */
+  order: 2;           /* النص يظهر بعد الصورة (على اليمين) */
+  text-align: right;  /* محاذاة النص إلى اليمين */
+}
 
 /* ✅ Responsive Design Section */
 
@@ -313,6 +331,14 @@ body::after {
   }
 }
 
+
+@media (max-width: 1086px) {
+  .img, .p {
+    flex: 1 1 100%;   /* كل منهما يشغل كامل العرض على الشاشات الصغيرة */
+    order: initial;   /* إعادة ترتيب افتراضية */
+    text-align: right; /* الحفاظ على محاذاة النص لليمين */
+  }
+}
 
 
 
