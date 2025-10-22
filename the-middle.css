@@ -48,7 +48,7 @@ body::after {
 /* --- Hero --- */
 .hero-ky {
   position: relative;
-  z-index: 1; /* ensures text is above image */
+  z-index: 1; /* keep hero image behind text */
   padding: 44px 24px;
   text-align: center;
   border-radius: 12px;
@@ -63,10 +63,10 @@ body::after {
   inset: 0;
   background: url('assets/hero.jpg') center/cover no-repeat;
   opacity: 0.12;
-  transform: scale(1.08);
+  transform: none; /* remove scaling that causes overlap */
   filter: blur(2px);
   mix-blend-mode: overlay;
-  z-index: -1; /* safely behind hero content */
+  z-index: -1;
 }
 
 .hero-ky h2 {
@@ -81,10 +81,11 @@ body::after {
 .hero-ky p {
   color: rgba(255,255,255,0.78);
   font-size: 1.05rem;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto 8px;
   line-height: 1.7;
   word-break: break-word;
+  text-align: center;
 }
 
 /* --- Timeline Section --- */
@@ -342,18 +343,25 @@ body::after {
 
 /* --- الأجهزة الصغيرة (موبايل أقل من 768px) --- */
 @media (max-width: 768px) {
-  body { font-size: 0.95rem; }
-  .hero-ky { padding: 28px 14px; }
-  .hero-ky h2 { font-size: 1.4rem; }
-  .hero-ky p { font-size: 0.9rem; }
-  .nodes { display: none; }
-  .path-wrapper { min-height: auto; }
-  .card { padding: 14px; }
-  .media-placeholder img { height: 220px; }
-  .media-row { flex-direction: column; }
-  .media-row img { width: 100%; height: 140px; }
-  .controls { flex-direction: column; gap: 10px; }
+  .hero-bg {
+    display: none; /* completely hide image on mobile */
+  }
+
+  .hero-ky {
+    padding: 28px 14px;
+    background: rgba(0, 40, 35, 0.35); /* slightly stronger background for readability */
+  }
+
+  .hero-ky h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-ky p {
+    font-size: 0.9rem;
+    width: 100%; /* make sure it spans fully */
+  }
 }
+
 
 /* --- الشاشات الصغيرة جدًا (أقل من 480px) --- */
 @media (max-width: 480px) {
@@ -376,6 +384,7 @@ body::after {
   .card h3 { font-size: 1.3rem; }
   .card p { font-size: 1.1rem; }
 }
+
 
 
 
