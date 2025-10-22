@@ -1,3 +1,4 @@
+/* --- الخلفية العامة --- */
 html, body {
   height: 100%;
   margin: 0;
@@ -47,8 +48,6 @@ body::after {
   margin-bottom:28px;
   background: rgba(0, 40, 35, 0.25);
   backdrop-filter: blur(4px);
-  position: relative;
-  z-index: 1;
 }
 .hero-ky h2 { font-size:1.95rem; margin-bottom:8px; font-weight:700; color:#fff; }
 .hero-ky p { color: rgba(255,255,255,0.78); font-size:1.05rem; max-width:900px; margin:0 auto 8px; }
@@ -151,7 +150,7 @@ body::after {
 }
 
 .media-row { display:flex; gap:10px; margin-top:10px; }
-.media-row img { width:50%; border-radius:10px;  object-fit:cover; }
+.media-row img { width:50%; border-radius:10px; height:120px; object-fit:cover; }
 
 .play-video { margin-top:12px; padding:10px 14px; border-radius:10px; border:none; background: rgba(230,100,90,0.12); color:#fff; cursor:pointer; font-weight:600; }
 .quote { margin-top:12px; padding-left:14px; border-right:4px solid rgba(255,255,255,0.05); color:#fff8d9; font-style:italic; }
@@ -296,6 +295,7 @@ body::after {
     font-size: 1.1rem;
   }
 }
+
 
 
 
