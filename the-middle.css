@@ -149,7 +149,7 @@ body::after {
 }
 
 .media-row { display:flex; gap:10px; margin-top:10px; }
-.media-row img { width:50%; border-radius:10px; height:120px; object-fit:cover; }
+.media-row img { width:50%; border-radius:10px; object-fit:cover; }
 
 .play-video { margin-top:12px; padding:10px 14px; border-radius:10px; border:none; background: rgba(230,100,90,0.12); color:#fff; cursor:pointer; font-weight:600; }
 .quote { margin-top:12px; padding-left:14px; border-right:4px solid rgba(255,255,255,0.05); color:#fff8d9; font-style:italic; }
@@ -328,3 +328,4 @@ body::after {
     font-size: 1.1rem;
   }
 }
+
