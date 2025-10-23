@@ -1,9 +1,11 @@
+
+
 /* --- الخلفية العامة --- */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #041412 0%, #0b3f33 60%);
+
   font-family: 'Cairo', 'Poppins', sans-serif;
   color: #e9f2ef;
   direction: rtl;
@@ -24,7 +26,7 @@ body::after {
 
 /* --- الهيدر --- */
 .topbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 40;
   background: rgba(0,0,0,0.25);
@@ -32,6 +34,7 @@ body::after {
   backdrop-filter: blur(6px);
   padding: 14px 20px;
   text-align: center;
+  width: 100%;
 }
 .topbar h1 { font-size:1.25rem; font-weight:600; letter-spacing:0.4px; }
 
@@ -48,6 +51,7 @@ body::after {
   margin-bottom:28px;
   background: rgba(0, 40, 35, 0.25);
   backdrop-filter: blur(4px);
+  margin-top: 40px;
 }
 .hero-ky h2 { font-size:1.95rem; margin-bottom:8px; font-weight:700; color:#fff; }
 .hero-ky p { color: rgba(255,255,255,0.78); font-size:1.05rem; max-width:900px; margin:0 auto 8px; }
@@ -92,7 +96,7 @@ body::after {
   pointer-events: none;
 }
 
-.node {
+.node , .node1 , .node5 {
   pointer-events: auto;
   position: absolute;
   top: 50%; /* منتصف الارتفاع */
@@ -219,9 +223,21 @@ body::after {
   .hero-ky p {
     font-size: 0.9rem;
   }
-  .nodes {
+ 
+  .nodes,
+  .path-svg {
     display: none;
   }
+  .path-intro p {
+    display: none;
+  }
+  .path-intro{
+    display: none;
+  }
+
+
+
+
   .path-wrapper {
     height: auto;
   }
@@ -292,9 +308,7 @@ body::after {
   }
   .card p {
     font-size: 1.1rem;
-  }
-}
-
+  }}
 
 
 
